@@ -1,7 +1,7 @@
 public class ListaDinamica {
     private int[] dados;
-    private int tamanho; // Número de elementos realmente na lista
-    private static final int CAPACIDADE_INICIAL = 100; // Começa com espaço para 100 números
+    private int tamanho;
+    private static final int CAPACIDADE_INICIAL = 100;
 
     public ListaDinamica() {
         this.dados = new int[CAPACIDADE_INICIAL];
@@ -10,7 +10,6 @@ public class ListaDinamica {
 
     // adiciona elemento
     public void adicionar(int numero) {
-        // Se a lista está cheia, dobra a capacidade
         if (tamanho == dados.length) {
             redimensionar();
         }
@@ -29,7 +28,7 @@ public class ListaDinamica {
         this.dados = novoArray; // substitui o array antigo pelo novo, maior
     }
 
-    // Converte lista para um array de inteiros do tamanho exato
+    // converte lista para um array de inteiros do tamanho exato
     public int[] paraArray() {
         int[] resultado = new int[tamanho];
         for (int i = 0; i < tamanho; i++) {

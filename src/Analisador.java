@@ -41,7 +41,7 @@ public class Analisador {
     private static int[] lerCsv(String caminhoArquivo) throws IOException {
         ListaDinamica numeros = new ListaDinamica();
         try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo))) {
-            br.readLine(); // Lê a primeira linha (o cabeçalho "Value") e a descarta.
+            br.readLine();
 
             String linha;
             // loop vai começar a ler a partir da SEGUNDA linha do arquivo.
